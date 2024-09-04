@@ -30,6 +30,7 @@ class PreferencesApplicationTests {
 	private UserPreferenceRepository preferenceRepository;
 
 	@Test
+	@Order(1)
 	void testGetPreferences() throws Exception {
 		UserPreference preference = new UserPreference();
 		preference.setUserId(1);
@@ -44,6 +45,7 @@ class PreferencesApplicationTests {
 	}
 
 	@Test
+	@Order(2)
 	void testUpdatePreferences() throws Exception {
 		UserPreference preference = new UserPreference();
 		preference.setDarkMode(Boolean.FALSE);
